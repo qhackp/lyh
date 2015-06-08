@@ -81,3 +81,16 @@ create table picture(
 	picture_name varchar2(50) not null,
 	board_no number(50) not null
 )
+
+-- voluntary_applicant_ok
+create table voluntary_applicant_ok(
+	constraint fk_applicate_recruit references voluntary_service_applicate(recruit_no),
+	constraint fk_applicate_member  references voluntary_service_applicate(member_no)
+)
+
+-- voluntary_applicant 확인해보것음
+create table voluntary_applicant(
+	constraint fk_applicate_recruit references voluntary_service_applicate(recruit_no),
+	constraint fk_applicate_member  references voluntary_service_applicate(member_no)
+)
+
