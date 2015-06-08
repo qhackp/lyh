@@ -74,3 +74,10 @@ create table comment(
 	time_posted date not null,
 	constraint fk_board_no references board(board_no)
 )
+
+--picture
+create table picture(
+	picture_no number(50) primary key,
+	picture_name varchar2(50) not null,
+	board_no number(50) not null
+)
