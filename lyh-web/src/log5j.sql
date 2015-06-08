@@ -56,3 +56,13 @@ create table voluntary_service_applicate(
 constraint fk_recruit_no references recruit(recruit_no),
 constraint fk_member_no references member(member_no)
 )
+
+create table QnA_board(
+title varchar2(50) primary key,
+writer varchar2(50) not null,
+content varchar2(50) not null,
+ref varchar2(50) not null,
+restep varchar2(50) not null,
+relevel varchar2(50) not null,
+constraint fk_member_no references member(member_no)
+)
