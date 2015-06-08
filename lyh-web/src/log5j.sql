@@ -20,3 +20,11 @@ create table board(
 )
 
 drop table board
+
+create table statistics(
+	age number not null,
+	field varchar(30),
+	applicate_count number not null,
+	primary key(age,field)
+)
+
