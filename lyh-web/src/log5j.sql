@@ -24,7 +24,7 @@ drop table board
 -- statistics
 create table statistics(
 	age number not null,
-	field varchar(30),
+	field varchar(50),
 	applicate_count number not null,
 	primary key(age,field)
 )
@@ -44,4 +44,33 @@ create table recruit(
 	
 drop table recruit
 
+create table scheduler(
+constraint fk_member_no references member(member_no),
+field varchar(50) not null,
+location varchar(50) not null,
+start_date date not null,
+end_date date not null
+)
 
+create table voluntary_service_applicate(
+constraint fk_recruit_no references recruit(recruit_no),
+constraint fk_member_no references member(member_no)
+)
+
+create table QnA_board(
+title varchar2(50) primary key,
+writer varchar2(50) not null,
+content varchar2(50) not null,
+ref varchar2(50) not null,
+restep varchar2(50) not null,
+relevel varchar2(50) not null,
+constraint fk_member_no references member(member_no)
+)
+--comment
+create table comment(
+	comment_no number primary key,
+	writer varchar2(50) not null,
+	content varchar2(50) not null,
+	time_posted date not null,
+	constraint fk_board_no references board(board_no)
+)
