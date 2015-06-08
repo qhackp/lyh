@@ -66,3 +66,11 @@ restep varchar2(50) not null,
 relevel varchar2(50) not null,
 constraint fk_member_no references member(member_no)
 )
+--comment
+create table comment(
+	comment_no number primary key,
+	writer varchar2(50) not null,
+	content varchar2(50) not null,
+	time_posted date not null,
+	constraint fk_board_no references board(board_no)
+)
