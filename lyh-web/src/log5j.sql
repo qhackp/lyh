@@ -23,7 +23,7 @@ drop table board
 
 create table statistics(
 	age number not null,
-	field varchar(30),
+	field varchar(50),
 	applicate_count number not null,
 	primary key(age,field)
 )
