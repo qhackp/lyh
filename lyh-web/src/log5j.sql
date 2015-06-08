@@ -10,7 +10,6 @@ create table member(
 )
 drop table member
 
-
 create table board(
 	board_no number(1000) primary key,
 	board_type varchar2(10) not null,
