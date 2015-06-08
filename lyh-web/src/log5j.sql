@@ -1,3 +1,4 @@
+-- member
 create table member(
 	member_no number primary key,
 	id varchar2(50) not null,
@@ -9,7 +10,7 @@ create table member(
 	member_type varchar2(10) not null
 )
 drop table member
-
+-- board
 create table board(
 	board_no number(1000) primary key,
 	board_type varchar2(10) not null,
@@ -20,11 +21,27 @@ create table board(
 )
 
 drop table board
-
+-- statistics
 create table statistics(
 	age number not null,
 	field varchar(30),
 	applicate_count number not null,
 	primary key(age,field)
 )
+
+drop table statistics
+
+--recruit
+create table recruit(
+	recruit_no primary key,
+	title varchar2(50) not null,
+	field varchar2(100) not null,
+	area varchar2(100) not null,
+	age varchar2(100) not null,
+	start_date date not null,
+	time_date date not null
+	)
+	
+drop table recruit
+
 
