@@ -51,3 +51,8 @@ location varchar(50) not null,
 start_date date not null,
 end_date date not null
 )
+
+create table voluntary_service_applicate(
+constraint fk_recruit_no references recruit(recruit_no),
+constraint fk_member_no references member(member_no)
+)
