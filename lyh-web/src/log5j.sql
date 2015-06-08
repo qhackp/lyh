@@ -44,4 +44,10 @@ create table recruit(
 	
 drop table recruit
 
-
+create table scheduler(
+constraint fk_member_no references member(member_no),
+field varchar(50) not null,
+location varchar(50) not null,
+start_date date not null,
+end_date date not null
+)
